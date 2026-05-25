@@ -1,10 +1,14 @@
-import sympy
+import sympy as sp
 from typing import Dict
 
 # Controlla il file readme.md per i dettagli su ciascun sub-task
 
 def calcola_derivata(espressione: str, variabile: str) -> sympy.Expr:
-    """Sub-task 1: Calcolare una Derivata."""
+    x= sp.Symbol("x")
+    funzione = str(input('Inserisci funzione: '))
+    derivata = sp.diff(funzione, x)
+    return derivata
+
     pass
 
 def calcola_integrale_definito(espressione: str, variabile: str, estremo_inf: float, estremo_sup: float) -> sympy.Expr:
