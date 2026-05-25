@@ -8,11 +8,15 @@ def calcola_derivata(espressione: str, variabile: str) -> sympy.Expr:
     funzione = str(input('Inserisci funzione: '))
     derivata = sp.diff(funzione, x)
     return derivata
-
     pass
 
 def calcola_integrale_definito(espressione: str, variabile: str, estremo_inf: float, estremo_sup: float) -> sympy.Expr:
-    """Sub-task 2: Calcolare un Integrale Definito."""
+    x= sp.Symbol("x")
+    funzione = str(input('Inserisci funzione: '))
+    a=int(input('Inserisci a (primo estremo di integrazione): '))
+    b=int(input('Inserisci b (secondo estremo di integrazione): '))
+    integrale_definito = sp.integrate(funzione,( x,a,b))
+    return integrale_definito
     pass
 
 def calcola_limite(espressione: str, variabile: str, punto: str) -> sympy.Expr:
