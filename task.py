@@ -37,7 +37,11 @@ def calcola_polinomio_taylor(espressione: str, variabile: str, punto: float, ord
     pass
 
 def risolvi_sistema_lineare(eq1: str, eq2: str, var1: str, var2: str) -> Dict[sympy.Symbol, sympy.Expr]:
-
+    x,y = sp.symbols('x, y')
+    eq1= str('Inserisci prima equazione: ')
+    eq2= str('Inserisci seconda equazione: ')
+    soluzione = sp.solve((eq1, eq2), (x, y))
+    return soluzione
     pass
 
 def main():
